@@ -1,0 +1,9 @@
+kind: pipeline
+name: default
+
+steps:
+  - name: test
+    image: ruby
+    commands:
+      - bundle install
+      - rspec
