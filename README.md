@@ -1,4 +1,4 @@
-# Drone 演習用リポジトリ(drone)
+# Drone 演習用リポジトリ(drone ex)
 
 DroneでCI/CDを体験するための、練習用リポジトリです。
 
