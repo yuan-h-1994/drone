@@ -19,3 +19,13 @@ steps:
       - npm install textlint
       - npm install textlint-rule-preset-ja-technical-writing
       - $(npm bin)/textlint --format pretty-error --preset ja-technical-writing README.md
+
+---
+kind: pipeline
+name: gotest
+steps:
+  - name: gotest
+    image: golang
+    commands:
+      - go build
+      - go test
