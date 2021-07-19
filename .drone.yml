@@ -27,6 +27,6 @@ steps:
   - name: gotest
     image: golang
     commands:
-      - go mod init hello.go
+      - go mod init tidy
       - go build
       - go test
