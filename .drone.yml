@@ -22,9 +22,9 @@ steps:
 
 ---
 kind: pipeline
-name: gotest
+name: gotest(mock)
 steps:
-  - name: gotest
+  - name: gotest(mock)
     image: golang
     commands:
       - go mod init tidy
