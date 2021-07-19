@@ -2,7 +2,21 @@ package main
 
 import (
     "testing"
+    "fmt"
+    "os"
+    "errors"
+    "context"
+
 )
+type DataStore interface {
+	FindUser(ctx context.Context, id int) (*User, error)
+	CreateUser(ctx context.Context, name string) error
+}
+
+type User struct {
+	id   int
+	name string
+}
 
 type MockUserDataStore struct{}
 
@@ -29,7 +43,7 @@ func TestHello(t *testing.T) {
     storage := NewMockDataStore()
 	//user, err = storage.FindUser(context.TODO(), 1)
 	// ...
-	err = storage.CreateUser(context.TODO(), "1")
+	err := storage.CreateUser(context.TODO(), "1")
 	if err != nil {
 		t.Fatal(err)
 	}
